@@ -1,3 +1,4 @@
+import { useUserTracking } from "@/Contexts/UserTrackingContext";
 import { motion } from "framer-motion";
 import {
   FaBuilding,
@@ -112,6 +113,19 @@ const enterpriseOffers = [
 ];
 
 function EnterpriseShield() {
+  const { totalVisitCount } = useUserTracking();
+
+  // Filter offers based on odd/even totalVisitCount
+  const filteredOffers = enterpriseOffers?.filter((offer) => {
+    if (totalVisitCount % 2 === 0) {
+      // Show even numbered offers for even visits
+      return offer.id % 2 === 0;
+    } else {
+      // Show odd numbered offers for odd visits
+      return offer.id % 2 === 1;
+    }
+  });
+
   return (
     <section className="bg-background lg:py-16 py-5 px-3 lg:px-20">
       <motion.div
@@ -128,7 +142,7 @@ function EnterpriseShield() {
       </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {enterpriseOffers.map((offer, index) => (
+        {filteredOffers?.map((offer, index) => (
           <motion.div
             key={offer.id}
             initial={{ opacity: 0, y: 50 }}
@@ -137,10 +151,10 @@ function EnterpriseShield() {
             className="bg-card rounded-xl p-6 shadow-lg hover:border-primary transition-all duration-300 border-2 border-primary/20 flex flex-col justify-between"
           >
             <div className="flex items-center mb-4">
-              <div className="p-3 bg-primary/10 rounded-lg">
+              {/* <div className="p-3 bg-primary/10 rounded-lg">
                 <offer.icon className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold ml-4">{offer.title}</h3>
+              </div> */}
+              <h3 className="text-xl font-semibold">{offer.title}</h3>
             </div>
             <p className="text-muted-foreground mb-4">{offer.description}</p>
             <div className="text-xl font-bold text-primary mb-4">
