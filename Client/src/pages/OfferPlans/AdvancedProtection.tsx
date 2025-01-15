@@ -1,4 +1,4 @@
-import { useUserTracking } from "@/Contexts/UserTrackingContext";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import {
   FaUserShield,
@@ -12,6 +12,8 @@ import {
   FaSatelliteDish,
   FaShieldAlt,
 } from "react-icons/fa";
+import { useUserTracking } from "../../Contexts/UserTrackingContext";
+import { SecurityFormModal } from "@/components/Modals/SecurityFormModal";
 
 const advancedSecurityOffers = [
   {
@@ -103,6 +105,10 @@ const advancedSecurityOffers = [
 
 function AdvancedProtection() {
   const { totalVisitCount } = useUserTracking();
+  const [selectedOffer, setSelectedOffer] = useState<
+    null | (typeof advancedSecurityOffers)[0]
+  >(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Filter offers based on odd/even totalVisitCount
   const filteredOffers = advancedSecurityOffers?.filter((offer) => {
@@ -114,6 +120,11 @@ function AdvancedProtection() {
       return offer.id % 2 === 1;
     }
   });
+
+  const handleClick = (offer: (typeof advancedSecurityOffers)[0]) => {
+    setSelectedOffer(offer);
+    setIsModalOpen(true);
+  };
 
   return (
     <section className="bg-background lg:py-16 py-5 px-3 lg:px-20">
@@ -157,12 +168,26 @@ function AdvancedProtection() {
                 </li>
               ))}
             </ul>
-            <button className="w-full mt-6 bg-primary text-white py-2 rounded-lg hover:bg-primary/90 transition-colors duration-300">
+            <button
+              onClick={() => handleClick(offer)}
+              className="w-full mt-6 bg-primary text-white py-2 rounded-lg hover:bg-primary/90 transition-colors duration-300"
+            >
               Get Started
             </button>
           </motion.div>
         ))}
       </div>
+      {selectedOffer && (
+        <SecurityFormModal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+          offerDetails={{
+            id: selectedOffer.id,
+            title: selectedOffer.title,
+            price: selectedOffer.price,
+          }}
+        />
+      )}
     </section>
   );
 }
