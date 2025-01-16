@@ -292,7 +292,7 @@
       "id": 1,
       "title": "Global Security Operations",
       "description": "Worldwide security infrastructure management",
-      "price": "Custom",
+      "price": "11999",
       "features": [
         "Global Coverage",
         "24/7 Command Center",
@@ -323,7 +323,7 @@
       "id": 2,
       "title": "Critical Infrastructure Protection",
       "description": "Security for essential infrastructure facilities",
-      "price": "Custom",
+      "price": "12399",
       "features": [
         "Infrastructure Monitoring",
         "Emergency Response",
@@ -350,7 +350,7 @@
       "id": 3,
       "title": "Financial Security Suite",
       "description": "Comprehensive banking and financial institution security",
-      "price": "Custom",
+      "price": "11299",
       "features": [
         "Vault Protection",
         "Transaction Security",
@@ -384,7 +384,7 @@
       "id": 4,
       "title": "Government Security Program",
       "description": "Specialized security for government facilities",
-      "price": "Custom",
+      "price": "13199",
       "features": [
         "Classified Protection",
         "Personnel Security",
@@ -415,7 +415,7 @@
       "id": 5,
       "title": "Healthcare Security Enterprise",
       "description": "Complete healthcare facility security solution",
-      "price": "Custom",
+      "price": "14000",
       "features": [
         "Patient Protection",
         "Medical Asset Security",

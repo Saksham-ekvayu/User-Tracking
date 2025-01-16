@@ -1,10 +1,15 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { useUserTracking } from "../../Contexts/UserTrackingContext";
-import { Link } from "react-router-dom";
 import { basicOffers } from "../../../Data.json";
+import { SecurityFormModal } from "@/components/Modals/SecurityFormModal";
 
 function BasicSecurity() {
   const { totalVisitCount } = useUserTracking();
+  const [selectedOffer, setSelectedOffer] = useState<
+    null | (typeof basicOffers)[0]
+  >(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Filter offers based on odd/even totalVisitCount
   const filteredOffers = basicOffers?.filter((offer) => {
@@ -16,6 +21,11 @@ function BasicSecurity() {
       return offer.id % 2 === 1;
     }
   });
+
+  const handleClick = (offer: (typeof basicOffers)[0]) => {
+    setSelectedOffer(offer);
+    setIsModalOpen(true);
+  };
 
   return (
     <section className="bg-background lg:py-16 py-5 px-3 lg:px-20">
@@ -59,14 +69,26 @@ function BasicSecurity() {
                 </li>
               ))}
             </ul>
-            <Link to={`/offers/basic-security/${offer.id}`}>
-              <button className="w-full mt-6 bg-primary text-white py-2 rounded-lg hover:bg-primary/90 transition-colors duration-300">
-                Learn More
-              </button>
-            </Link>
+            <button
+              onClick={() => handleClick(offer)}
+              className="w-full mt-6 bg-primary text-white py-2 rounded-lg hover:bg-primary/90 transition-colors duration-300"
+            >
+              Get Started
+            </button>
           </motion.div>
         ))}
       </div>
+      {selectedOffer && (
+        <SecurityFormModal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+          offerDetails={{
+            id: selectedOffer.id,
+            title: selectedOffer.title,
+            price: selectedOffer.price,
+          }}
+        />
+      )}
     </section>
   );
 }

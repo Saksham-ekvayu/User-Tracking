@@ -1,4 +1,4 @@
-import { useLocation, useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import {
   basicOffers,
   advancedOffers,
@@ -129,9 +129,12 @@ function OfferById() {
 
             {/* CTA Section */}
             <section className="text-center">
-              <button className="bg-primary hover:bg-primary/80 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-200">
+              <Link
+                to={"/contact-us"}
+                className="bg-primary hover:bg-primary/80 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-200"
+              >
                 Get Started
-              </button>
+              </Link>
               <p className="mt-4 text-gray-500">
                 Need help? Contact our sales team
               </p>
