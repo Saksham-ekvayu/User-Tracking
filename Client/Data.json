@@ -1,0 +1,442 @@
+{
+  "basicOffers": [
+    {
+      "id": 1,
+      "title": "24/7 Surveillance",
+      "description": "Round-the-clock monitoring with advanced camera systems",
+      "price": "2499",
+      "features": [
+        "HD Cameras with 4K Resolution",
+        "Smart Motion Detection with AI",
+        "Cloud Storage for Footage"
+      ],
+      "benefits": [
+        "Real-time Monitoring",
+        "Instant Alert System",
+        "Remote Access"
+      ],
+      "faq": [
+        {
+          "question": "What type of cameras are included?",
+          "answer": "We provide enterprise-grade 4K cameras with weatherproof capabilities."
+        },
+        {
+          "question": "Is installation included?",
+          "answer": "Yes, professional installation is included in the package."
+        }
+      ],
+      "terms": {
+        "subscription": ["12-month minimum contract", "24/7 technical support"],
+        "payment": ["Monthly billing", "Flexible payment options"],
+        "cancellation": [
+          "30-day notice required",
+          "No early termination fee with valid reason"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "title": "Access Control",
+      "description": "Secure entry management system with biometric authentication",
+      "price": "1999",
+      "features": [
+        "Fingerprint Scanner",
+        "Key Card Access",
+        "Mobile Credentials"
+      ],
+      "benefits": [
+        "Enhanced Security",
+        "Automated Entry Logs",
+        "Employee Tracking"
+      ],
+      "faq": [
+        {
+          "question": "What authentication methods are supported?",
+          "answer": "We support fingerprint, key card, PIN, and mobile authentication."
+        },
+        {
+          "question": "Can the system be integrated with existing security?",
+          "answer": "Yes, our system is compatible with most existing security infrastructure."
+        }
+      ],
+      "terms": {
+        "subscription": ["12-month minimum contract", "Priority support"],
+        "payment": ["Quarterly billing", "Corporate payment options"],
+        "cancellation": ["45-day notice required", "Equipment return policy"]
+      }
+    },
+    {
+      "id": 3,
+      "title": "Perimeter Protection",
+      "description": "Complete boundary security with advanced sensors",
+      "price": "3499",
+      "features": ["Motion Sensors", "Infrared Detection", "Virtual Fence"],
+      "benefits": [
+        "Boundary Protection",
+        "Early Warning System",
+        "Area Management"
+      ],
+      "faq": [
+        {
+          "question": "What is the coverage area?",
+          "answer": "Our system can cover up to 5 acres with standard equipment."
+        },
+        {
+          "question": "Does weather affect the sensors?",
+          "answer": "Our sensors are weatherproof and operate in all conditions."
+        }
+      ],
+      "terms": {
+        "subscription": ["24-month contract", "Maintenance included"],
+        "payment": ["Monthly billing", "Volume discounts"],
+        "cancellation": ["60-day notice required", "Prorated refunds available"]
+      }
+    },
+    {
+      "id": 4,
+      "title": "Retail Security",
+      "description": "Comprehensive retail protection solution",
+      "price": "2799",
+      "features": [
+        "Anti-theft Systems",
+        "Inventory Tracking",
+        "Customer Analytics"
+      ],
+      "benefits": ["Loss Prevention", "Customer Insights", "Staff Security"],
+      "faq": [
+        {
+          "question": "Does it integrate with POS systems?",
+          "answer": "Yes, we support integration with major POS providers."
+        },
+        {
+          "question": "What analytics are included?",
+          "answer": "Customer flow, dwell time, and theft prevention analytics."
+        }
+      ],
+      "terms": {
+        "subscription": ["18-month contract", "Retail-specific support"],
+        "payment": ["Monthly billing", "Seasonal adjustments"],
+        "cancellation": ["30-day notice required", "Equipment buyout option"]
+      }
+    },
+    {
+      "id": 5,
+      "title": "Smart Office Security",
+      "description": "Intelligent office protection system",
+      "price": "3999",
+      "features": [
+        "Smart Locks",
+        "Visitor Management",
+        "Environmental Monitoring"
+      ],
+      "benefits": [
+        "Workspace Safety",
+        "Resource Optimization",
+        "Access Control"
+      ],
+      "faq": [
+        {
+          "question": "Can it handle multiple office locations?",
+          "answer": "Yes, our system supports multi-location management."
+        },
+        {
+          "question": "Is mobile access included?",
+          "answer": "Yes, with our secure mobile app for all users."
+        }
+      ],
+      "terms": {
+        "subscription": ["24-month contract", "Business hours support"],
+        "payment": ["Annual billing", "Multi-location discounts"],
+        "cancellation": [
+          "45-day notice required",
+          "Transfer of service available"
+        ]
+      }
+    }
+  ],
+  "advancedOffers": [
+    {
+      "id": 1,
+      "title": "AI Security Suite",
+      "description": "Advanced AI-powered security solution",
+      "price": "7499",
+      "features": [
+        "Behavioral Analytics",
+        "Predictive Alerts",
+        "Machine Learning"
+      ],
+      "benefits": [
+        "Proactive Security",
+        "Automated Response",
+        "Threat Prevention"
+      ],
+      "faq": [
+        {
+          "question": "How does the AI learning work?",
+          "answer": "Our AI continuously learns from your environment to improve accuracy."
+        },
+        {
+          "question": "What's the false alarm rate?",
+          "answer": "Less than 0.1% with our advanced AI filtering."
+        }
+      ],
+      "terms": {
+        "subscription": ["36-month contract", "24/7 AI monitoring"],
+        "payment": ["Monthly billing", "Enterprise rates"],
+        "cancellation": ["90-day notice required", "Data retention options"]
+      }
+    },
+    {
+      "id": 2,
+      "title": "Cyber Defense Plus",
+      "description": "Comprehensive digital security system",
+      "price": "8999",
+      "features": ["Network Protection", "Threat Detection", "Data Encryption"],
+      "benefits": ["Digital Safety", "Data Protection", "Cyber Defense"],
+      "faq": [
+        {
+          "question": "What encryption standards are used?",
+          "answer": "We use military-grade AES-256 encryption."
+        },
+        {
+          "question": "Is cloud backup included?",
+          "answer": "Yes, with redundant storage in multiple locations."
+        }
+      ],
+      "terms": {
+        "subscription": ["24-month contract", "Cyber response team"],
+        "payment": ["Quarterly billing", "Security assurance"],
+        "cancellation": ["60-day notice required", "Data migration support"]
+      }
+    },
+    {
+      "id": 3,
+      "title": "Command Center Pro",
+      "description": "Professional security command center setup",
+      "price": "12999",
+      "features": [
+        "Central Monitoring",
+        "Multi-Screen Display",
+        "Crisis Management"
+      ],
+      "benefits": ["Unified Control", "Quick Response", "Situation Awareness"],
+      "faq": [
+        {
+          "question": "What's the control room setup time?",
+          "answer": "Typically 2-3 weeks for full implementation."
+        },
+        {
+          "question": "Do you train our staff?",
+          "answer": "Yes, comprehensive training is included."
+        }
+      ],
+      "terms": {
+        "subscription": ["48-month contract", "Command center support"],
+        "payment": ["Annual billing", "Equipment lease options"],
+        "cancellation": ["120-day notice required", "Equipment transfer terms"]
+      }
+    },
+    {
+      "id": 4,
+      "title": "Biometric Access Pro",
+      "description": "Advanced biometric security system",
+      "price": "9999",
+      "features": [
+        "Facial Recognition",
+        "Fingerprint Scanning",
+        "Iris Detection"
+      ],
+      "benefits": ["Secure Access", "Identity Verification", "Audit Trail"],
+      "faq": [
+        {
+          "question": "How accurate is the recognition?",
+          "answer": "99.9% accuracy with multi-factor authentication."
+        },
+        {
+          "question": "Is data stored securely?",
+          "answer": "Yes, with encrypted local and cloud storage."
+        }
+      ],
+      "terms": {
+        "subscription": ["36-month contract", "Biometric support"],
+        "payment": ["Monthly billing", "Usage-based pricing"],
+        "cancellation": ["90-day notice required", "Data deletion guarantee"]
+      }
+    },
+    {
+      "id": 5,
+      "title": "Drone Security Fleet",
+      "description": "Automated aerial surveillance system",
+      "price": "15999",
+      "features": ["Autonomous Drones", "Thermal Imaging", "Automated Patrols"],
+      "benefits": ["Aerial Coverage", "Night Vision", "Rapid Response"],
+      "faq": [
+        {
+          "question": "What's the drone flight time?",
+          "answer": "Up to 45 minutes per drone with automated charging."
+        },
+        {
+          "question": "Are permits included?",
+          "answer": "Yes, we handle all necessary aviation permits."
+        }
+      ],
+      "terms": {
+        "subscription": ["48-month contract", "Drone maintenance included"],
+        "payment": ["Quarterly billing", "Insurance included"],
+        "cancellation": ["120-day notice required", "Equipment return required"]
+      }
+    }
+  ],
+  "enterpriseOffers": [
+    {
+      "id": 1,
+      "title": "Global Security Operations",
+      "description": "Worldwide security infrastructure management",
+      "price": "Custom",
+      "features": [
+        "Global Coverage",
+        "24/7 Command Center",
+        "Multi-site Integration"
+      ],
+      "benefits": [
+        "Worldwide Protection",
+        "Centralized Control",
+        "Custom Solutions"
+      ],
+      "faq": [
+        {
+          "question": "What's the implementation timeline?",
+          "answer": "Typically 3-6 months depending on scope."
+        },
+        {
+          "question": "Do you provide international support?",
+          "answer": "Yes, with local teams in major regions."
+        }
+      ],
+      "terms": {
+        "subscription": ["Custom contract", "Global support network"],
+        "payment": ["Custom billing", "Multi-currency options"],
+        "cancellation": ["Negotiable terms", "Transition assistance"]
+      }
+    },
+    {
+      "id": 2,
+      "title": "Critical Infrastructure Protection",
+      "description": "Security for essential infrastructure facilities",
+      "price": "Custom",
+      "features": [
+        "Infrastructure Monitoring",
+        "Emergency Response",
+        "Risk Management"
+      ],
+      "benefits": ["Asset Protection", "Compliance", "Operational Continuity"],
+      "faq": [
+        {
+          "question": "What compliance standards are met?",
+          "answer": "We meet ISO27001, NERC-CIP, and other standards."
+        },
+        {
+          "question": "Is redundancy included?",
+          "answer": "Yes, with backup systems and failover protocols."
+        }
+      ],
+      "terms": {
+        "subscription": ["Long-term partnership", "Dedicated support team"],
+        "payment": ["Custom payment structure", "Performance guarantees"],
+        "cancellation": ["Custom notice period", "Continuity planning"]
+      }
+    },
+    {
+      "id": 3,
+      "title": "Financial Security Suite",
+      "description": "Comprehensive banking and financial institution security",
+      "price": "Custom",
+      "features": [
+        "Vault Protection",
+        "Transaction Security",
+        "Fraud Prevention"
+      ],
+      "benefits": [
+        "Financial Safety",
+        "Regulatory Compliance",
+        "Asset Protection"
+      ],
+      "faq": [
+        {
+          "question": "Does it meet banking regulations?",
+          "answer": "Yes, compliant with all major banking security standards."
+        },
+        {
+          "question": "What about cyber security?",
+          "answer": "Integrated physical and cyber security included."
+        }
+      ],
+      "terms": {
+        "subscription": ["Custom agreement", "Financial sector support"],
+        "payment": ["Structured payments", "Risk-based pricing"],
+        "cancellation": [
+          "Regulatory-compliant terms",
+          "Data handling protocols"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "title": "Government Security Program",
+      "description": "Specialized security for government facilities",
+      "price": "Custom",
+      "features": [
+        "Classified Protection",
+        "Personnel Security",
+        "Secure Communications"
+      ],
+      "benefits": [
+        "Government Standards",
+        "Classified Operations",
+        "National Security"
+      ],
+      "faq": [
+        {
+          "question": "What clearance levels are supported?",
+          "answer": "We support all government security clearance levels."
+        },
+        {
+          "question": "Is SCIF construction included?",
+          "answer": "Yes, with certified SCIF design and build services."
+        }
+      ],
+      "terms": {
+        "subscription": ["Government contract terms", "Classified support"],
+        "payment": ["Government payment terms", "Budget cycles"],
+        "cancellation": ["Agency-specific terms", "Security protocols"]
+      }
+    },
+    {
+      "id": 5,
+      "title": "Healthcare Security Enterprise",
+      "description": "Complete healthcare facility security solution",
+      "price": "Custom",
+      "features": [
+        "Patient Protection",
+        "Medical Asset Security",
+        "HIPAA Compliance"
+      ],
+      "benefits": ["Patient Safety", "Staff Security", "Regulatory Compliance"],
+      "faq": [
+        {
+          "question": "Is it HIPAA compliant?",
+          "answer": "Yes, fully compliant with all HIPAA requirements."
+        },
+        {
+          "question": "Can it integrate with EMR systems?",
+          "answer": "Yes, we support major EMR system integrations."
+        }
+      ],
+      "terms": {
+        "subscription": ["Healthcare-specific terms", "Compliance support"],
+        "payment": ["Healthcare billing cycles", "Compliance reporting"],
+        "cancellation": ["Patient data protection", "Equipment sterilization"]
+      }
+    }
+  ]
+}

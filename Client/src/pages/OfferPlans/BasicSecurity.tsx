@@ -1,116 +1,13 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
-import {
-  FaVideo,
-  FaFingerprint,
-  FaBell,
-  FaShieldAlt,
-  FaUsers,
-  FaLock,
-  FaEye,
-  FaClock,
-  FaKey,
-} from "react-icons/fa";
 import { useUserTracking } from "../../Contexts/UserTrackingContext";
-import { SecurityFormModal } from "@/components/Modals/SecurityFormModal";
-
-const basicSecurityOffers = [
-  {
-    id: 1,
-    title: "24/7 Surveillance",
-    description:
-      "Round-the-clock monitoring of your premises with advanced camera systems",
-    icon: FaVideo,
-    price: "$2499/month",
-    features: ["HD Cameras", "Night Vision", "Motion Detection"],
-  },
-  {
-    id: 2,
-    title: "Access Control",
-    description: "Secure entry management system with biometric authentication",
-    icon: FaFingerprint,
-    price: "$1999/month",
-    features: ["Fingerprint Scanner", "Key Card Access", "Visitor Management"],
-  },
-  {
-    id: 3,
-    title: "Intrusion Detection",
-    description: "Advanced sensor network to detect unauthorized access",
-    icon: FaBell,
-    price: "$2999/month",
-    features: ["Motion Sensors", "Window Sensors", "Door Contacts"],
-  },
-  {
-    id: 4,
-    title: "Cyber Security Basic",
-    description: "Essential digital security package for small businesses",
-    icon: FaShieldAlt,
-    price: "$3999/month",
-    features: ["Firewall Protection", "Antivirus", "Email Security"],
-  },
-  {
-    id: 5,
-    title: "Guard Patrol",
-    description: "Professional security personnel for physical premises",
-    icon: FaUsers,
-    price: "$5999/month",
-    features: ["Trained Guards", "Regular Patrols", "Incident Response"],
-  },
-  {
-    id: 6,
-    title: "Smart Locks",
-    description: "IoT-enabled smart locking systems for all entry points",
-    icon: FaLock,
-    price: "$2499/month",
-    features: ["Remote Access", "Activity Logs", "Emergency Override"],
-  },
-  {
-    id: 7,
-    title: "Video Analytics",
-    description: "AI-powered video monitoring and analysis",
-    icon: FaEye,
-    price: "$4499/month",
-    features: ["Face Recognition", "Object Detection", "Behavioral Analysis"],
-  },
-  {
-    id: 8,
-    title: "Emergency Response",
-    description: "Quick response system for security emergencies",
-    icon: FaClock,
-    price: "$3499/month",
-    features: ["24/7 Support", "Mobile App", "Priority Response"],
-  },
-  {
-    id: 9,
-    title: "Key Management",
-    description: "Secure key storage and management system",
-    icon: FaKey,
-    price: "$2999/month",
-    features: ["Digital Vault", "Access Logging", "Key Tracking"],
-  },
-  {
-    id: 10,
-    title: "Basic Security Bundle",
-    description: "Complete security package for essential protection",
-    icon: FaShieldAlt,
-    price: "$6999/month",
-    features: [
-      "All Basic Features",
-      "Monthly Reports",
-      "Security Consultation",
-    ],
-  },
-];
+import { Link } from "react-router-dom";
+import { basicOffers } from "../../../Data.json";
 
 function BasicSecurity() {
   const { totalVisitCount } = useUserTracking();
-  const [selectedOffer, setSelectedOffer] = useState<
-    null | (typeof basicSecurityOffers)[0]
-  >(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Filter offers based on odd/even totalVisitCount
-  const filteredOffers = basicSecurityOffers?.filter((offer) => {
+  const filteredOffers = basicOffers?.filter((offer) => {
     if (totalVisitCount % 2 === 0) {
       // Show even numbered offers for even visits
       return offer.id % 2 === 0;
@@ -119,11 +16,6 @@ function BasicSecurity() {
       return offer.id % 2 === 1;
     }
   });
-
-  const handleClick = (offer: (typeof basicSecurityOffers)[0]) => {
-    setSelectedOffer(offer);
-    setIsModalOpen(true);
-  };
 
   return (
     <section className="bg-background lg:py-16 py-5 px-3 lg:px-20">
@@ -157,7 +49,7 @@ function BasicSecurity() {
             </div>
             <p className="text-muted-foreground mb-4">{offer.description}</p>
             <div className="text-2xl font-bold text-primary mb-4">
-              {offer.price}
+              ${offer.price}/month
             </div>
             <ul className="space-y-2">
               {offer.features.map((feature, i) => (
@@ -167,26 +59,14 @@ function BasicSecurity() {
                 </li>
               ))}
             </ul>
-            <button
-              onClick={() => handleClick(offer)}
-              className="w-full mt-6 bg-primary text-white py-2 rounded-lg hover:bg-primary/90 transition-colors duration-300"
-            >
-              Get Started
-            </button>
+            <Link to={`/offers/basic-security/${offer.id}`}>
+              <button className="w-full mt-6 bg-primary text-white py-2 rounded-lg hover:bg-primary/90 transition-colors duration-300">
+                Learn More
+              </button>
+            </Link>
           </motion.div>
         ))}
       </div>
-      {selectedOffer && (
-        <SecurityFormModal
-          isOpen={isModalOpen}
-          onClose={() => setIsModalOpen(false)}
-          offerDetails={{
-            id: selectedOffer.id,
-            title: selectedOffer.title,
-            price: selectedOffer.price,
-          }}
-        />
-      )}
     </section>
   );
 }

@@ -27,6 +27,7 @@ import BasicSecurity from "./pages/OfferPlans/BasicSecurity";
 import AdvancedProtection from "./pages/OfferPlans/AdvancedProtection";
 import EnterpriseShield from "./pages/OfferPlans/EnterpriseShield";
 import { UserTrackingProvider } from "./Contexts/UserTrackingContext";
+import OfferById from "./pages/OfferPlans/OfferById/OfferById";
 
 function App() {
   return (
@@ -193,6 +194,30 @@ function App() {
             element={
               <Layout>
                 <EnterpriseShield />
+              </Layout>
+            }
+          />
+          <Route
+            path="/offers/basic-security/:id"
+            element={
+              <Layout>
+                <OfferById />
+              </Layout>
+            }
+          />
+          <Route
+            path="/offers/advanced-protection/:id"
+            element={
+              <Layout>
+                <OfferById />
+              </Layout>
+            }
+          />
+          <Route
+            path="/offers/enterprise-shield/:id"
+            element={
+              <Layout>
+                <OfferById />
               </Layout>
             }
           />

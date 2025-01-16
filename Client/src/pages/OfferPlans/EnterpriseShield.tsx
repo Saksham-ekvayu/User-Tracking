@@ -2,117 +2,7 @@ import { SecurityFormModal } from "@/components/Modals/SecurityFormModal";
 import { useUserTracking } from "@/Contexts/UserTrackingContext";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import {
-  FaBuilding,
-  FaGlobe,
-  FaShieldAlt,
-  FaUserTie,
-  FaChartLine,
-  FaCogs,
-  FaHandshake,
-  FaLock,
-  FaClipboardCheck,
-  FaCertificate,
-} from "react-icons/fa";
-
-const enterpriseOffers = [
-  {
-    id: 1,
-    title: "Global Security Operations",
-    description: "Worldwide security infrastructure management and monitoring",
-    icon: FaGlobe,
-    price: "Custom Pricing",
-    features: [
-      "Global SOC Coverage",
-      "Multi-region Support",
-      "24/7 Expert Team",
-    ],
-  },
-  {
-    id: 2,
-    title: "Corporate Risk Management",
-    description: "Comprehensive risk assessment and mitigation strategies",
-    icon: FaChartLine,
-    price: "Custom Pricing",
-    features: ["Risk Analytics", "Compliance Management", "Strategic Planning"],
-  },
-  {
-    id: 3,
-    title: "Executive Protection",
-    description: "Specialized security services for corporate executives",
-    icon: FaUserTie,
-    price: "Custom Pricing",
-    features: ["Personal Security", "Travel Protection", "Threat Assessment"],
-  },
-  {
-    id: 4,
-    title: "Infrastructure Security",
-    description: "End-to-end protection for critical infrastructure",
-    icon: FaBuilding,
-    price: "Custom Pricing",
-    features: ["Physical Security", "Access Control", "Emergency Response"],
-  },
-  {
-    id: 5,
-    title: "Custom Security Solutions",
-    description: "Tailored security implementations for unique requirements",
-    icon: FaCogs,
-    price: "Custom Pricing",
-    features: [
-      "Bespoke Solutions",
-      "Integration Support",
-      "Custom Development",
-    ],
-  },
-  {
-    id: 6,
-    title: "Strategic Partnerships",
-    description: "Long-term security collaboration and support",
-    icon: FaHandshake,
-    price: "Custom Pricing",
-    features: [
-      "Dedicated Account Team",
-      "Strategic Planning",
-      "Priority Support",
-    ],
-  },
-  {
-    id: 7,
-    title: "Advanced Compliance",
-    description: "Comprehensive regulatory compliance management",
-    icon: FaClipboardCheck,
-    price: "Custom Pricing",
-    features: ["Audit Support", "Policy Management", "Regulatory Updates"],
-  },
-  {
-    id: 8,
-    title: "Zero Trust Architecture",
-    description: "Implementation of zero trust security framework",
-    icon: FaLock,
-    price: "Custom Pricing",
-    features: [
-      "Identity Verification",
-      "Access Management",
-      "Security Monitoring",
-    ],
-  },
-  {
-    id: 9,
-    title: "Enterprise Certification",
-    description: "Security certifications and compliance programs",
-    icon: FaCertificate,
-    price: "Custom Pricing",
-    features: ["ISO Certification", "Industry Standards", "Best Practices"],
-  },
-  {
-    id: 10,
-    title: "Total Shield Protection",
-    description: "Complete enterprise security ecosystem",
-    icon: FaShieldAlt,
-    price: "Custom Pricing",
-    features: ["Full Coverage", "Integration", "Managed Services"],
-  },
-];
+import { enterpriseOffers } from "../../../Data.json";
 
 function EnterpriseShield() {
   const { totalVisitCount } = useUserTracking();
@@ -169,7 +59,7 @@ function EnterpriseShield() {
             </div>
             <p className="text-muted-foreground mb-4">{offer.description}</p>
             <div className="text-xl font-bold text-primary mb-4">
-              {offer.price}
+              ${offer.price}/month
             </div>
             <ul className="space-y-2">
               {offer.features.map((feature, i) => (
